@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="192dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="128dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="inserisci la durata"
+        app:layout_constraintBottom_toTopOf="@+id/inserisci"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="192dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="inserisci l'autore"
+        app:layout_constraintBottom_toTopOf="@+id/genere"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/autore"
+        android:layout_width="79dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="15dp"
+        android:text="AUTORE"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/durata"
+        android:layout_width="79dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="8dp"
+        android:text="DURATA"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/titolo"
+        android:layout_width="79dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="21dp"
+        android:text="TITOLO"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/testo"
+        android:layout_width="79dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="42dp"
+        android:text="TESTO"
+        app:layout_constraintBottom_toTopOf="@+id/titolo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/genere"
+        android:layout_width="79dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="15dp"
+        android:text="GENERE"
+        app:layout_constraintBottom_toTopOf="@+id/generi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="192dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="inserisci il titolo"
+        app:layout_constraintBottom_toTopOf="@+id/autore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/inserisci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="29dp"
+        android:text="INSERISCI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/visualizza"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/visualizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="127dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="29dp"
+        android:text="VISUALIZZA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+
+    <Spinner
+        android:id="@+id/generi"
+        android:layout_width="184dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/durata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
