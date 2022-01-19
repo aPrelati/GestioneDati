@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/durata"
         android:layout_width="192dp"
         android:layout_height="39dp"
         android:layout_marginStart="109dp"
@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/autore"
         android:layout_width="192dp"
         android:layout_height="39dp"
         android:layout_marginStart="109dp"
@@ -30,74 +30,63 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="inserisci l'autore"
-        app:layout_constraintBottom_toTopOf="@+id/genere"
+        app:layout_constraintBottom_toTopOf="@+id/genereTXT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/autore"
-        android:layout_width="79dp"
-        android:layout_height="22dp"
+        android:id="@+id/autoreTXT"
+        android:layout_width="61dp"
+        android:layout_height="24dp"
         android:layout_marginStart="166dp"
         android:layout_marginEnd="166dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="12dp"
         android:text="AUTORE"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/autore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/durata"
-        android:layout_width="79dp"
-        android:layout_height="22dp"
+        android:id="@+id/durataTXT"
+        android:layout_width="65dp"
+        android:layout_height="20dp"
         android:layout_marginStart="166dp"
         android:layout_marginEnd="166dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="20dp"
         android:text="DURATA"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/titolo"
-        android:layout_width="79dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="166dp"
-        android:layout_marginEnd="166dp"
-        android:layout_marginBottom="21dp"
-        android:text="TITOLO"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/durata"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/testo"
-        android:layout_width="79dp"
-        android:layout_height="22dp"
+        android:layout_width="124dp"
+        android:layout_height="33dp"
         android:layout_marginStart="166dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="166dp"
-        android:layout_marginBottom="42dp"
-        android:text="TESTO"
-        app:layout_constraintBottom_toTopOf="@+id/titolo"
+        android:layout_marginBottom="25dp"
+        android:text="INSERISCI I DATI"
+        app:layout_constraintBottom_toTopOf="@+id/titoloTXT"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/genere"
-        android:layout_width="79dp"
-        android:layout_height="22dp"
+        android:id="@+id/genereTXT"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
         android:layout_marginStart="166dp"
         android:layout_marginEnd="166dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="12dp"
         android:text="GENERE"
-        app:layout_constraintBottom_toTopOf="@+id/generi"
+        app:layout_constraintBottom_toTopOf="@+id/genere"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/titolo"
         android:layout_width="192dp"
         android:layout_height="39dp"
         android:layout_marginStart="109dp"
@@ -106,7 +95,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="inserisci il titolo"
-        app:layout_constraintBottom_toTopOf="@+id/autore"
+        app:layout_constraintBottom_toTopOf="@+id/autoreTXT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -132,16 +121,28 @@
         android:text="VISUALIZZA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/durata" />
 
     <Spinner
-        android:id="@+id/generi"
+        android:id="@+id/genere"
         android:layout_width="184dp"
         android:layout_height="43dp"
         android:layout_marginStart="114dp"
         android:layout_marginEnd="114dp"
         android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/durata"
+        app:layout_constraintBottom_toTopOf="@+id/durataTXT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/titoloTXT"
+        android:layout_width="57dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="177dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="18dp"
+        android:text="TITOLO"
+        app:layout_constraintBottom_toTopOf="@+id/titolo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

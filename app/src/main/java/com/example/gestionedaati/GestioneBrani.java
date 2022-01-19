@@ -1,5 +1,7 @@
 package com.example.gestionedaati;
 
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class GestioneBrani
@@ -25,9 +27,7 @@ public class GestioneBrani
 
     public String visualizzaLista()
     {
-        String lista="";
-
-        return lista;
+        return "ciao";
     }
 
 }

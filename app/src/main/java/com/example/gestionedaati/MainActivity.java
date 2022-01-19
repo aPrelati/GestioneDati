@@ -2,14 +2,12 @@ package com.example.gestionedaati;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
@@ -30,7 +28,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        spnGenere= (Spinner) findViewById(R.id.generi);
+        spnGenere= (Spinner) findViewById(R.id.genere);
         ArrayAdapter <String> spGen= new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, elencoGeneri);
         spnGenere.setAdapter(spGen);
 
@@ -41,9 +39,8 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 String testo= spnGenere.getSelectedItem().toString();
-                Toast.makeText(getApplicationContext(), testo, Toast.LENGTH_LONG);
-                //gb.addBrano(titolo.getText().toString());
-
+                Toast.makeText(getApplicationContext(), testo, Toast.LENGTH_LONG).show();
+                gb.addBrano(titolo.getText().toString());
 
             }
         });
@@ -52,7 +49,7 @@ public class MainActivity extends AppCompatActivity
         visualizza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Toast.makeText(getApplicationContext(), "visualizza", Toast.LENGTH_LONG).show();
             }
         });
     }
