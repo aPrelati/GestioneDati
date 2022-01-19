@@ -9,7 +9,7 @@ public class Brano
     private String titolo;
     private String autore;
     private String genere;
-    private Integer durata; //integer è la classe degli interi che offre dei metodi sennò bisognava usare int con la i minuscola
+    private Integer durata;
     private String urlVideo;
     private Date dataLancio;
 

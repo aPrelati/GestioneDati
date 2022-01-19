@@ -8,7 +8,8 @@ public class GestioneBrani
 {
     ArrayList <Brano> listaBrani;
 
-    public GestioneBrani(){
+    public GestioneBrani()
+    {
         listaBrani= new ArrayList<Brano>();
     }
 
