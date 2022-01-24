@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,6 +16,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
+
+    private static final String TAG= MainActivity.class.getSimpleName();
     EditText titolo;
     EditText autore;
     Spinner spnGenere;
@@ -35,6 +38,8 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.e(TAG, "Dentro il metodo onCreate"); //"errore" dentro il metodo onCreate
+
         titolo= (EditText) findViewById(R.id.titolo);
         autore= (EditText) findViewById(R.id.autore);
         durata= (EditText) findViewById(R.id.durata);
@@ -53,15 +58,8 @@ public class MainActivity extends AppCompatActivity
         inserisci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String testo= spnGenere.getSelectedItem().toString();
-                /*Toast.makeText(getApplicationContext(), testo, Toast.LENGTH_LONG).show();
-                gb.addBrano(titolo.getText().toString());*/
-                Intent i= new Intent(MainActivity.this, SecondActivity.class);
-                i.putExtra("genere", testo.toString());
-                i.putExtra("titolo", titolo.getText().toString());
-                i.putExtra("autore", autore.getText().toString());
-                i.putExtra("durata", durata.getText().toString());
-                startActivity(i);
+                String genere= spnGenere.getSelectedItem().toString();
+                gb.addBrano(titolo.getText().toString(), autore.getText().toString(), genere, durata.getText().toString());
             }
         });
 
@@ -69,7 +67,11 @@ public class MainActivity extends AppCompatActivity
         visualizza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "visualizza", Toast.LENGTH_LONG).show();
+                String listaBrani= gb.listaSong();
+
+                Intent i= new Intent(MainActivity.this, SecondActivity.class);
+                i.putExtra("listaBrani", listaBrani);
+                startActivity(i);
             }
         });
     }

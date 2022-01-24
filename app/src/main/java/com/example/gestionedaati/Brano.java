@@ -9,72 +9,45 @@ public class Brano
     private String titolo;
     private String autore;
     private String genere;
-    private Integer durata;
-    private String urlVideo;
-    private Date dataLancio;
+    private String durata; //integer è la classe degli interi che offre dei metodi sennò bisognava usare int con la i minuscola
 
-    public Brano(String titolo)
+    public Brano(String titolo, String autore, String genere, String durata)
     {
         this.titolo= titolo;
+        this.autore= autore;
+        this.genere= genere;
+        this.durata= durata;
     }
 
-    public String getTitolo()
-    {
+    public String getTitolo() {
         return titolo;
     }
 
-    public void setTitolo(String titolo)
-    {
+    public void setTitolo(String titolo) {
         this.titolo = titolo;
     }
 
-    public String getAutore()
-    {
+    public String getAutore() {
         return autore;
     }
 
-    public void setAutore(String autore)
-    {
+    public void setAutore(String autore) {
         this.autore = autore;
     }
 
-    public String getGenere()
-    {
+    public String getGenere() {
         return genere;
     }
 
-    public void setGenere(String genere)
-    {
+    public void setGenere(String genere) {
         this.genere = genere;
     }
 
-    public Integer getDurata()
-    {
+    public String getDurata() {
         return durata;
     }
 
-    public void setDurata(Integer durata)
-    {
+    public void setDurata(String durata) {
         this.durata = durata;
-    }
-
-    public String getUrlVideo()
-    {
-        return urlVideo;
-    }
-
-    public void setUrlVideo(String urlVideo)
-    {
-        this.urlVideo = urlVideo;
-    }
-
-    public Date getDataLancio()
-    {
-        return dataLancio;
-    }
-
-    public void setDataLancio(Date dataLancio)
-    {
-        this.dataLancio = dataLancio;
     }
 }

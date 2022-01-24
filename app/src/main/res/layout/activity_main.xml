@@ -43,6 +43,7 @@
         android:layout_marginStart="166dp"
         android:layout_marginEnd="166dp"
         android:layout_marginBottom="12dp"
+        android:gravity="center"
         android:text="AUTORE"
         app:layout_constraintBottom_toTopOf="@+id/autore"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,6 +56,7 @@
         android:layout_marginStart="166dp"
         android:layout_marginEnd="166dp"
         android:layout_marginBottom="20dp"
+        android:gravity="center"
         android:text="DURATA"
         app:layout_constraintBottom_toTopOf="@+id/durata"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +69,7 @@
         android:layout_marginStart="166dp"
         android:layout_marginEnd="166dp"
         android:layout_marginBottom="12dp"
+        android:gravity="center"
         android:text="GENERE"
         app:layout_constraintBottom_toTopOf="@+id/genere"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,15 +130,14 @@
         android:layout_width="57dp"
         android:layout_height="22dp"
         android:layout_marginStart="177dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="109dp"
         android:layout_marginEnd="177dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="72dp"
+        android:gravity="center"
         android:text="TITOLO"
         app:layout_constraintBottom_toTopOf="@+id/titolo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

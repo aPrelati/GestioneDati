@@ -8,11 +8,11 @@ import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity
 {
-    TextView titoloSLC;
+    /*TextView titoloSLC;
     TextView autoreSLC;
     TextView genereSLC;
-    TextView durataSLC;
-
+    TextView durataSLC;*/
+    TextView listaBrani;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,7 +20,7 @@ public class SecondActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        String titolo= getIntent().getStringExtra("titolo");
+        /*String titolo= getIntent().getStringExtra("titolo");
         String autore= getIntent().getStringExtra("autore");
         String genere= getIntent().getStringExtra("genere");
         String durata= getIntent().getStringExtra("durata");
@@ -33,7 +33,13 @@ public class SecondActivity extends AppCompatActivity
         titoloSLC.setText("Titolo: "+titolo);
         autoreSLC.setText("Autore: "+autore);
         genereSLC.setText("Genere: "+genere);
-        durataSLC.setText("Durata: "+durata);
+        durataSLC.setText("Durata: "+durata);*/
+
+        listaBrani= findViewById(R.id.listaBrani);
+
+        String lb= getIntent().getStringExtra("listaBrani");
+
+        listaBrani.setText(lb);
 
     }
 }

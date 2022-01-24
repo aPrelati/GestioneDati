@@ -13,22 +13,25 @@ public class GestioneBrani
         listaBrani= new ArrayList<Brano>();
     }
 
-    public String visualizzaTesto(String titolo)
+    public void addBrano(String titolo, String autore, String genere, String durata) //sul pulsante inserisci
     {
-        String testo="";
-
-        return testo;
-    }
-
-    public void addBrano(String titolo)
-    {
-        Brano br= new Brano(titolo);
+        Brano br= new Brano(titolo, autore, genere, durata);
         listaBrani.add(br); //metodo che mi permette di inserire gli oggetti
     }
 
-    public String visualizzaLista()
+    public String listaSong() //sul pulsante visualizza
     {
-        return "ciao";
+        StringBuilder sbSogn= new StringBuilder();
+
+        for(Brano brc : listaBrani) //brc è l'istanza della classe brano per ogni lista brano aggiungo un elemento
+        {
+            sbSogn.append(brc.getTitolo().toString()+"-");
+            sbSogn.append(brc.getAutore().toString()+"-");
+            sbSogn.append(brc.getGenere().toString()+"-");
+            sbSogn.append(brc.getDurata().toString()+"\n\n");
+        }
+        return sbSogn.toString();
     }
+
 
 }
